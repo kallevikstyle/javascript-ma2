@@ -2,9 +2,17 @@
 
 1. What is a function literal?
 
+A function literal is a function which is defined as an expression, and it does not necessarily have a name. It consists of four parts: the keyword 'function', the optional name, the function's parameters wrapped in parantheses, and the statements wrapped in curly braces.
+
 2. What is the constructor?
 
+In JavaScript we can make a constructor function that can 'construct' new objects. This way we can make a blueprint for all objects created from it, and we can decide which properties and methods it will inherit. When we create an object with the constructor, we use the keyword 'new'.
+
 3. What does the return statement do?
+
+We use the return statement when we want to return anything (like a value, an object, or a function) from a function. Two significant things happen when the return statement is executed: 
+- JavaScript returns the value to the caller that invoked the function. If we for example assign the function call to a variable, whatever is in the return statement will be assigned to the variable.
+- When JavaScript executes a return statement, the function is ended after the value is returned, and nothing more inside it will be executed.
 
 4. What will be written to the console from this function:
 		function myFunction(){
@@ -13,5 +21,13 @@
 		}
 		myFunction();
 
+This proves the point from my answer in question 3; only the string 'inside my function' is logged to the console, because it is returned by a return statement. This means nothing more will be executed from the function, after the return line,
+
 
 5. Briefly describe scope in JavaScript.
+
+Scope is a term that defines the lifetime of variables. We have global scope and local scope.
+
+Whenever a function is defined, it creates a local scope, and a nested function within a function creates a local scope unaccessible by the function outside of it.
+
+A variable in the global scope can be accessed by all functions, while a variable in a local scope only lives as long as that function is being executed. That also means that any nested function still has access to a local variable within the scope of its outer function, because the latter is still active.
